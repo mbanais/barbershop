@@ -1,0 +1,313 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,200&display=swap');
+
+:root{
+    --couleurNoir: #2B2F3D;
+    --couleurRouge: #DF7A56;
+    --couleurJaune: #F0B400;
+    --couleurBlanc: #FFFFFF;
+    --policeTitre:'Angkor';
+    --policeGenerale: 'LibreFranklin', Arial, sans-serif;
+}
+
+body{
+    background-color: var(--couleurNoir);
+    color: var(--couleurBlanc);
+    font-family: var(--policeGenerale);
+}
+
+/*SECTIONS*/
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+h2{
+    font: var(--policeTitre);
+
+}
+
+
+img{
+    max-width: 100%;
+}
+.notreHistoire{
+    box-shadow: var(--couleurRouge) -5px 5px;
+    width: 300px;
+    height: 300px;
+}
+
+
+/********FORMULAIRE********/
+form{
+    margin-bottom: 2em;
+    width: 100%;
+}
+fieldset{
+    border: solid 2px var(--couleurRouge);
+    padding-top: 1em;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+@media(min-width: 1000px){
+    fieldset{
+        padding: 1em 3em;
+    }
+}
+fieldset div{
+    margin-bottom: 1em;
+}
+fieldset p{
+    text-transform: uppercase;
+}
+label{
+    text-transform: uppercase;
+    margin-top: 8em;
+    padding-bottom: 10em;
+}
+input[type="text"], 
+input[type="email"]{
+    height: 50px;
+    width: 100%;
+}
+@media(min-width:600px){
+    input[type="text"]{
+        width: 70%
+    }
+}
+
+.conteneurCalendrier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width:1000px){
+    .conteneurCalendrier{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+}
+
+/*CALENDRIER*/
+.calendrier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-color: var(--couleurBlanc);
+    width: 255px;
+    padding-top: 1em;
+    align-self: center;
+}
+.calendrier p{
+    color: var(--couleurNoir);
+
+    text-transform: uppercase;
+    margin: 0;
+    align-self: center;
+    border-bottom: solid 1px var(--couleurNoir);
+} 
+.semaine{
+    border-bottom: solid 2px var(--couleurNoir);
+}
+.jour{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--couleurNoir);
+    list-style-type: none;
+    padding: 0 20px;
+    width: 215px;
+}
+.jour li{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.jaune{
+    border: solid 1px var(--couleurJaune);
+    border-radius: 50%;
+}
+.rouge{
+    background-color: var(--couleurRouge);
+    border-radius: 50%;
+}
+.noir{
+    background-color: rgba(43, 47, 61, 38%);
+    border-radius: 50%;
+}
+
+/*LÉGENDE-CALENDRIER*/
+.legendeCalendrier div{
+    margin-bottom: 0;
+}
+.legendeCalendrier{
+    background-color: var(--couleurBlanc);
+    color: var(--couleurNoir);
+    width: 255px;
+    margin-bottom: 1em;
+    align-self: center;
+}
+@media(min-width: 600px){
+    .legendeCalendrier{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: fit-content;
+        padding: 0 10px;
+    }
+}
+@media(min-width:1000px){
+    .legendeCalendrier{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 255px;
+    }
+}
+.aujourdHui{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    padding-left: .5em;
+}
+.aujourdHui .span{
+    display: inline-block;
+    border: solid 1px var(--couleurJaune);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+.ferme{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    padding-left: .5em;
+}
+.ferme .span{
+    display: inline-block;
+    background-color: rgba(43, 47, 61, 38%);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+.complet{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    padding-left: .5em;
+}
+.complet .span{
+    display: inline-block;
+    background-color: var(--couleurRouge);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+
+
+/*CHECKBOX*/
+.conteneurCheckbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+@media(min-width:600px){
+    .conteneurCheckbox{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.checkbox label{
+    margin-top: 0;
+    padding-bottom: 0;
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+}
+
+@media(min-width:600px){
+    .checkbox{
+        width: 50%;
+    }
+}
+@media(min-width:1000px){
+    .checkbox{
+        width: 33%;
+    }
+}
+input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+}
+
+/*COMMENTAIRES*/
+.commentaires{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.commentaires label{
+    margin-top: 0;
+    padding-bottom: 0;
+}
+.commentaires textarea{
+    width: 100%;
+    height: 150px;
+}
+
+/*BOUTON*/
+button{
+    background-color: var(--couleurJaune);
+    color: var(--couleurNoir);
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight:bolder;
+    border: none;
+    width: 280px;
+    height: 80px;
+    align-self: center;
+}
+button:hover{
+    text-decoration: underline;
+}
+button:active{
+    background-color: var(--couleurBlanc);
+    text-decoration: underline;
+}
+button:focus{
+    outline: 1em var(--couleurBlanc);
+    border: var(--couleurBlanc) -3px solid;
+}
+
+/*******FOOTER******/
+footer{
+    background-color: var(--couleurRouge);
+    color: var(--couleurNoir);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: baseline;
+}
