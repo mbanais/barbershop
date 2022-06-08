@@ -10,12 +10,12 @@
 function changerIcone(){
     let strMenuOuvert = refImageMenu.classList[1];
     if(strMenuOuvert === 'ouvert'){
-        refImageMenu.src='../images/hamburger_menu_icon.svg';
+        refImageMenu.src='./images/hamburger_menu_icon.svg';
         refImageMenu.classList.remove('ouvert');
         refImageMenu.classList.add('ferme');
         refMenu.style.display='none';
     } else if (strMenuOuvert === 'ferme'){
-        refImageMenu.src='../images/close_icon.svg';
+        refImageMenu.src='./images/close_icon.svg';
         refImageMenu.classList.remove('ferme');
         refImageMenu.classList.add('ouvert');
         refMenu.style.display='block';
