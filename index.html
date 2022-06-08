@@ -6,7 +6,11 @@
     </head>
     <body>
         <header>
-            <ul role="navigation">
+            <div class="menuVisible">
+                <img class="logo" src="" alt="">
+                <img class="nav_icon ferme" src="./images/hamburger_menu_icon.svg">
+            </div>
+            <ul class="menuCache" role="navigation">
                 <li><a href="#notreHistoire">Notre histoire</a></li>
                 <li><a href="#nosServices">Nos services</a></li>
                 <li><a href="#nousTrouver">Nous trouver</a></li>
@@ -14,15 +18,7 @@
             </ul>   
         </header>
         <main role="main">
-            <div class="layout">
-                
-            </div>
-            <section>
-                <picture>
-                    <srcset></srcset>
-                    <img class="enTete" src="./images/image_enTete.jpg" alt="">
-                </picture>
-            </section>
+            <section class="enTete"></section>
             
             <section class="un" id="notreHistoire">
                 <div class="h2">
@@ -34,7 +30,7 @@
                         <rect width="200px" height="38px" style="fill: #df7a56"></rect>
                     </svg>
                 </div>             
-                <img class="notreHistoire" src="./images/image_notreHistoire.jpg" alt="">
+                <img class="notreHistoire" src="./images/clam-lo-3fe9WvS0FfU-unsplash422.jpg" alt="">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dui ut sem iaculis tempus vel ullamcorper tellus. Suspendisse pretium, sem non auctor ultricies, nunc orci ornare velit, sit amet ornare nisl massa vel lectus. Sed semper venenatis leo eget fermentum. Vivamus eget egestas nunc, sit amet lacinia risus. 
                     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
                     Cras aliquam vitae velit nec faucibus. Etiam nec sapien eros. Praesent tempus nulla et orci malesuada, non fermentum felis viverra. Aliquam semper nibh nibh, sed suscipit nunc lobortis sit amet. <br>
@@ -99,7 +95,7 @@
                         </svg>
                         <span class="nousTrouver__indications">Autoroute: </span><br>
 
-                        Prendre la 80 en direction de Braupré <br>
+                        Prendre la 80 en direction de Beaupré <br>
                         Prendre la sortie 6 direction Charest-Est
                     </p>
                     <p>
@@ -111,18 +107,28 @@
                         Prendre le bus 800 <br>
                         Arrêt: Chevalier ou Bélanger
                     </p>
+                    <p class="pReseauxSociaux">
+                        <svg width="320px" height="35px">
+                            <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
+                        </svg>
+                        <span class="nousTrouver__indications">Nos réseaux sociaux: </span>
+                        <span class="reseauxSociaux">
+                            <a href="https://www.facebook.com/"><img src="./images/facebook.svg"></a> <a href="https://www.instagram.com/"><img src="./images/instagram.svg"></a>
+                            <a href="https://twitter.com/"><img src="./images/twitter.svg"></a>
+                        </span>
+                    </p>
                 </div>
             </section>
             
             <section class="quatre" id="rendezVous">
                 <div class="h2">
                     <svg width="200px" height="40px">
-                    <rect width="200px" height="38px" style="fill: #df7a56"></rect>
-                </svg>
-                <div class="effetH2">
-                    <h2 class="titreSecondaire">Rendez-vous</h2>
-                    <h2 class="effet">Rendez-vous</h2>
-                </div>
+                        <rect width="200px" height="38px" style="fill: #df7a56"></rect>
+                    </svg>
+                    <div class="effetH2">
+                        <h2 class="titreSecondaire">Rendez-vous</h2>
+                        <h2 class="effet">Rendez-vous</h2>
+                    </div>
                 </div>
                 
                 <form role="form">
@@ -154,7 +160,7 @@
                                     <li class="semaine">S</li>
                                     <li class="semaine">D</li>
                                     
-                                    <li><input type="radio" name="calendrier" value="vide" id="vide" class="screen-reader-only">
+                                    <li><input type="radio" name="calendrier" value="vide" id="vide" class="screen-reader-only" required>
                                         <label for="vide"></label>
                                     </li>
                                     <li><input type="radio" name="calendrier" value="vide1" id="vide1" class="screen-reader-only">
@@ -299,10 +305,13 @@
             </section>
         </main>
         <footer role="contentinfo">
-            <p>Réalisé par Anaïs Mannée-Batschy</p>
-            <p>Sources des images: </p>
+            <p>© Anaïs Mannée-Batschy, Juin 2022</p>
+            <a class="liensFooter" href="https://unsplash.com/photos/EW_rqoSdDes">Photo by Nathon Oski on Unsplash</a><br>
+            <a class="liensFooter" href="https://unsplash.com/photos/3fe9WvS0FfU">Photo by Clam Lo on Unsplash</a><br>
+            <a class="liensFooter" href="https://www.pexels.com/fr-fr/photo/deux-hommes-a-l-interieur-de-la-chambre-2775269/">Photo de Thgusstavo Santana</a>
         </footer>
 
         <script src="./js/script.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
 </html>

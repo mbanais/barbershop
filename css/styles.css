@@ -14,17 +14,35 @@ body{
     background-color: var(--couleurNoir);
     color: var(--couleurBlanc);
     font-family: 'LibreFranklin', 'Franklin', Arial, Helvetica, sans-serif;
-    max-width: 100%;
+    width: 100%;
 }
-/*@media(min-width: 1000px){
-    .layout{
-        margin: 0px 100px;
-    }
-}*/
 
-/*NAVIGATION PRINCIPALE*/
+
+
+/*NAVIGATION PRINCIPALE (UN)*/
+.menuVisible{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.menuCache{
+    display: none;
+}
+.menu{
+    color: var(--couleurNoir);
+    text-transform: uppercase;
+}
+.nav_icon{
+    height: 50px;
+}
+
+
+/*NAVIGATION PRINCIPALE (BIS)*/
 header{
     background-color: var(--couleurRouge);
+    width: 100%;
 }
 header ul{
     background-color: var(--couleurRouge);
@@ -70,6 +88,25 @@ ul a:focus{
     background-color: var(--couleurBlanc);
 }
 
+/*EN-TÊTE*/
+.enTete{
+    background-image: url(../images/image_enTete.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 562px;
+}
+@media(min-width:600px){
+    .enTete{
+        height: 805px;
+    }
+}
+@media(min-width:1000px){
+    .enTete{
+        height: 875px;
+        width: 100%;
+    }
+}
+
 /*SECTIONS*/
 section{
     border-bottom: solid 2px var(--couleurJaune);
@@ -78,7 +115,6 @@ main section:first-child,
 main section:last-child{
     border-bottom: none;
 }
-
 @media(min-width:1000px){
     .un,
     .deux,
@@ -87,7 +123,26 @@ main section:last-child{
         margin: 0 100px;
     }
 }
-
+@media(min-width:1000px){
+    .un{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .un .h2{
+        flex: 1 0 100%;
+    }
+    .un .notreHistoire{
+        flex: 0 1 35%;
+        margin-bottom: 1em;
+    }
+    .un p{
+        flex: 0 1 50%;
+        margin-left: 1em;
+    }
+}
 
 .deux{
     display: flex;
@@ -122,6 +177,8 @@ main section:last-child{
     }
 }
 
+
+
 /*H2*/
 .h2{
     display: flex;
@@ -140,6 +197,14 @@ svg{
 .deux .h2 svg{
     margin-right: 1em;
 }
+
+.effetH2:nth-child(2) .titreSecondaire,
+.effetH2:nth-child(2) .effet,
+.effetH2:nth-child(4) .titreSecondaire,
+.effetH2:nth-child(4) .effet{
+    text-align: right;
+}
+
 
 .effetH2{
     display: block;
@@ -180,6 +245,15 @@ svg{
     }
 }
 
+
+p svg{
+    margin-left: 0;
+}
+p:nth-child(1) svg{
+    margin-left: 0;
+}
+
+
 /*LISTE DES SERVICES*/
 .listeServices li{
     padding-bottom: .5em;
@@ -197,8 +271,8 @@ img{
 }
 .notreHistoire{
     box-shadow: var(--couleurRouge) -5px 5px;
-    width: 300px;
-    height: 300px;
+    max-width: 80%;
+    max-height: 80%;
 }
 .nosServices{
     box-shadow: var(--couleurJaune) 5px 5px;
@@ -222,12 +296,11 @@ img{
     align-items: baseline;
     width: 100%;
 }
-
 @media(min-width:600px){
     .nousTrouver__indicationsListe{
         flex-direction: row;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-start;
         flex-wrap: wrap;
     }
     .nousTrouver__indicationsListe p{
@@ -237,7 +310,7 @@ img{
 @media(min-width: 1000px){
     .nousTrouver__indicationsListe{
         justify-content: flex-start;
-        align-items: baseline;
+        align-items: flex-start;
     }
 }
 .nousTrouver__indications{
@@ -248,7 +321,7 @@ img{
 
 /*LIEN PDF*/
 @media (min-width: 600px){
-    p a{
+    .deux p a{
         position: relative;
         bottom: 100px;
         left: 20px;
@@ -269,6 +342,29 @@ p a:focus{
 p a:active{
     color: var(--couleurJaune);
 }
+
+
+/*RÉSEAUX SOCIAUX*/
+.reseauxSociaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+a img{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.pReseauxSociaux{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /********FORMULAIRE********/
 form{
@@ -345,13 +441,11 @@ input[type="email"]{
 }
 .calendrier p{
     color: var(--couleurNoir);
-
     text-transform: uppercase;
     margin: 0;
     align-self: center;
     border-bottom: solid 1px var(--couleurNoir);
-} 
-
+}
 .jour{
     display: flex;
     flex-direction: row;
@@ -374,7 +468,6 @@ li label{
     max-width: 100%;
     max-height: 100%;
 }
-
 .semaine{
     border-bottom: solid 2px var(--couleurNoir);
     height: 20px;
@@ -585,7 +678,16 @@ footer{
     color: var(--couleurNoir);
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+}
+
+.liensFooter{
+    color: var(--couleurNoir);
+    font-size: .8em;
+    text-decoration: none;
+}
+.liensFooter:hover{
+    text-decoration: underline;
 }
 
