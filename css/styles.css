@@ -17,8 +17,6 @@ body{
     width: 100%;
 }
 
-
-
 /*NAVIGATION PRINCIPALE (UN)*/
 .menuVisible{
     display: flex;
@@ -319,6 +317,35 @@ img{
     margin-bottom: .5em;
 }
 
+
+/* NOUS TROUVER 2.0 */
+.trois{
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+}
+.map{
+    height: 50vh;
+    width: 100%;
+    background-image: url(../images/maps.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ctn__coordonnees{
+    background-color: #2B2F3D;
+    width: fit-content;
+    padding: 2.5em;
+    position: absolute;
+    right: 1em;
+    bottom: 30%;
+}
+.ctn__coordonnees svg{
+    margin-left: 0;
+}
+
+
+
 /*LIEN PDF*/
 @media (min-width: 600px){
     .deux p a{
@@ -371,7 +398,7 @@ form{
     margin-bottom: 2em;
     width: 100%;
 }
-fieldset{
+form fieldset{
     border: solid 2px var(--couleurRouge);
     padding-top: 1em;
     max-width: 100%;
@@ -381,13 +408,20 @@ fieldset{
     align-items: stretch;
 }
 @media(min-width: 1000px){
-    fieldset{
+    form fieldset{
         padding: 1em 3em;
     }
 }
+fieldset fieldset{
+    border: none;
+}
+
 fieldset div{
     margin-bottom: 1em;
 }
+
+
+
 fieldset p{
     text-transform: uppercase;
 }
@@ -473,7 +507,6 @@ li label{
     height: 20px;
     width: 20px;
 }
-
 .jaune{
     border: solid 1px var(--couleurJaune);
     border-radius: 50%;

@@ -37,8 +37,6 @@ function ajouterCouleurDisabled(){
     for (let intCpt = 0; intCpt <= arrInputRadioDisabled.length; intCpt++){
         let refInputDisabled = arrInputRadioDisabled[intCpt];
         refInputDisabled.nextElementSibling.classList.add('disabled');
-
-
     }
 };
 
