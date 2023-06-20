@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Le Barbershop du coin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/styles.css"></link>
     </head>
     <body>
@@ -49,7 +50,7 @@
                         <h2 class="effet">Nos services</h2>
                     </div>
                 </div>
-                <ul class="listeServices">
+                <!--<ul class="listeServices">
                     <li>Coupes de cheveux</li>
                     <li>Coloration</li>
                     <li>Coupe de barbe</li>
@@ -57,9 +58,16 @@
                     <li>Vente de produits capilaires</li>
                     <li>Shampooing</li>
                     et bien d'autres ...
-                </ul>
-                <img class="nosServices" src="./images/image_nosServices.jpg" alt="">
-                <p> <a href=""> → Cliquez ici pour trouver tous nos tarifs ← </a></p>
+                </ul>-->
+                <div class="nosServices">
+                    <img class="nosServices__services" src="./images/nosServices/services1.png" alt="">
+                    <div class="ctn__btn">
+                        <button class="precedent">&#9664;</button>
+                        <button class="suivant">&#9654;</button>
+                    </div>
+                </div>
+                <img class="nosServices__img" src="./images/image_nosServices.jpg" alt="">
+                <!--<p> <a href=""> → Cliquez ici pour trouver tous nos tarifs ← </a></p>-->
             </section>
             
             <section class="trois" id="nousTrouver">
@@ -69,7 +77,8 @@
                         <h2 class="effet">Nous trouver</h2>
                     </div>
                 </div>
-                <div class="map">
+                <div class="ctn_map">
+                    <div class="map"></div>
                     <div class="ctn__coordonnees">
                         <svg width="200px" height="20px">
                             <rect width="200px" height="38px" style="fill: #fff"></rect>
@@ -84,8 +93,20 @@
                             Arrondissement: La Cité-Limoilou <br>
                             Quartier: St-Roch
                         </p>
+                        <p class="pReseauxSociaux">
+                            <!--<svg width="320px" height="35px">
+                                <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
+                            </svg>-->
+                            <span class="nousTrouver__indications">Nos réseaux sociaux: </span>
+                            <span class="reseauxSociaux">
+                                <a href="https://www.facebook.com/"><img src="./images/facebook.svg"></a> 
+                                <a href="https://www.instagram.com/"><img src="./images/instagram.svg"></a>
+                                <a href="https://twitter.com/"><img src="./images/twitter.svg"></a>
+                            </span>
+                        </p>
                     </div>
                 </div>
+                
 
             <!--    <img class="nousTrouver" src="./images/mapstyle_google.jpg" alt="">
                 <div class="nousTrouver__indicationsListe">
@@ -158,6 +179,10 @@
                         <fieldset>
                             <label for="courriel">Courriel: </label><br>
                             <input type="email" name="email" id="email">
+                        </fieldset>
+                        <fieldset>
+                            <label for="sujet">Sujet: </label><br>
+                            <input type="text" name="sujet" id="sujet">
                         </fieldset>                  
                         <!--<p>Date du rendez-vous:</p>                    
 
@@ -325,7 +350,7 @@
             <a class="liensFooter" href="https://www.pexels.com/fr-fr/photo/deux-hommes-a-l-interieur-de-la-chambre-2775269/">Photo de Thgusstavo Santana</a>
         </footer>
 
-        <script src="./js/script.js"></script>
         <script src="./js/menu.js"></script>
+        <script src="./js/visionneuse.js"></script>
     </body>
 </html>
