@@ -22,7 +22,7 @@
             <section class="enTete"></section>
             
             <section class="un" id="notreHistoire">
-                <div class="h2">
+                <div class="h2 h2--histoire">
                     <div class="effetH2">
                         <h2 class="titreSecondaire">Notre histoire</h2>
                         <h2 class="effet">Notre histoire</h2>
@@ -50,24 +50,16 @@
                         <h2 class="effet">Nos services</h2>
                     </div>
                 </div>
-                <!--<ul class="listeServices">
-                    <li>Coupes de cheveux</li>
-                    <li>Coloration</li>
-                    <li>Coupe de barbe</li>
-                    <li>Soins du visage</li>
-                    <li>Vente de produits capilaires</li>
-                    <li>Shampooing</li>
-                    et bien d'autres ...
-                </ul>-->
                 <div class="nosServices">
                     <img class="nosServices__services" src="./images/nosServices/services1.png" alt="">
                     <div class="ctn__btn">
                         <button class="precedent">&#9664;</button>
                         <button class="suivant">&#9654;</button>
                     </div>
+                    <p>* Tous les tarifs indiqués n’incluent pas les taxes <br>
+                        ** Tous les tarifs sont sujets à changement</p>
                 </div>
                 <img class="nosServices__img" src="./images/image_nosServices.jpg" alt="">
-                <!--<p> <a href=""> → Cliquez ici pour trouver tous nos tarifs ← </a></p>-->
             </section>
             
             <section class="trois" id="nousTrouver">
@@ -76,6 +68,9 @@
                         <h2 class="titreSecondaire">Nous trouver</h2>
                         <h2 class="effet">Nous trouver</h2>
                     </div>
+                    <svg width="200px" height="40px">
+                        <rect width="200px" height="38px" style="fill: #fff"></rect>
+                    </svg>
                 </div>
                 <div class="ctn_map">
                     <div class="map"></div>
@@ -106,53 +101,6 @@
                         </p>
                     </div>
                 </div>
-                
-
-            <!--    <img class="nousTrouver" src="./images/mapstyle_google.jpg" alt="">
-                <div class="nousTrouver__indicationsListe">
-                    <p>
-                        <svg width="320px" height="35px">
-                            <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
-                        </svg>
-                        <span class="nousTrouver__indications">Adresse: </span><br>
-                        Le Barbershop du coin <br>
-                        3000 boulevard Saint-Joseph Est <br>
-                        G1G 2v1 QC Québec <br>
-                        
-                        <span>lebarbershopducoin@coiffure.com</span><br>
-
-                        Arrondissement: La Cité-Limoilou <br>
-                        Quartier: St-Roch
-                    </p>
-                    <p>
-                        <svg width="320px" height="35px">
-                            <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
-                        </svg>
-                        <span class="nousTrouver__indications">Autoroute: </span><br>
-
-                        Prendre la 80 en direction de Beaupré <br>
-                        Prendre la sortie 6 direction Charest-Est
-                    </p>
-                    <p>
-                        <svg width="320px" height="35px">
-                            <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
-                        </svg>
-                        <span class="nousTrouver__indications">Transport en commun: </span><br>
-
-                        Prendre le bus 800 <br>
-                        Arrêt: Chevalier ou Bélanger
-                    </p>
-                    <p class="pReseauxSociaux">
-                        <svg width="320px" height="35px">
-                            <rect width="300px" height="30px" style="fill: rgb(255, 255, 255)"></rect>
-                        </svg>
-                        <span class="nousTrouver__indications">Nos réseaux sociaux: </span>
-                        <span class="reseauxSociaux">
-                            <a href="https://www.facebook.com/"><img src="./images/facebook.svg"></a> <a href="https://www.instagram.com/"><img src="./images/instagram.svg"></a>
-                            <a href="https://twitter.com/"><img src="./images/twitter.svg"></a>
-                        </span>
-                    </p>
-                </div>-->
             </section>
             
             <section class="quatre" id="rendezVous">
@@ -184,161 +132,11 @@
                             <label for="sujet">Sujet: </label><br>
                             <input type="text" name="sujet" id="sujet">
                         </fieldset>                  
-                        <!--<p>Date du rendez-vous:</p>                    
-
-                        <div class="conteneur__conteneurCalendrier">
-                            <div class="conteneurCalendrier">
-                                <div class="calendrier">
-                                    <p>Juin 2022</p>
-                                    <ul class="jour">
-                                    <li class="semaine">L</li>
-                                    <li class="semaine">M</li>
-                                    <li class="semaine">M</li>
-                                    <li class="semaine">J</li>
-                                    <li class="semaine">V</li>
-                                    <li class="semaine">S</li>
-                                    <li class="semaine">D</li>
-                                    
-                                    <li><input type="radio" name="calendrier" value="vide" id="vide" class="screen-reader-only" required>
-                                        <label for="vide"></label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vide1" id="vide1" class="screen-reader-only">
-                                        <label for="vide1"></label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="calendrier" value="un" id="un" class="screen-reader-only">
-                                        <label for="un"> 1</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="deux" id="deux" class="screen-reader-only">
-                                        <label for="deux"> 2</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="trois" id="trois" class="screen-reader-only">
-                                        <label for="trois"> 3</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="quatre" id="quatre" class="screen-reader-only">
-                                        <label for="quatre"> 4</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="cinq" id="cinq" disabled="true" class="screen-reader-only">
-                                        <label for="cinq"> 5</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="six" id="six" class="screen-reader-only">
-                                        <label for="six"> 6</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="sept" id="sept" class="screen-reader-only">
-                                        <label for="sept"> 7</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="huit" id="huit" class="screen-reader-only">
-                                        <label for="huit"> 8</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="neuf" id="neuf" class="screen-reader-only">
-                                        <label for="neuf"> 9</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="dix" id="dix" class="screen-reader-only">
-                                        <label for="dix">10</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="onze" id="onze" class="screen-reader-only complet">
-                                        <label for="onze">11</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="douze" id="douze" disabled="true" class="screen-reader-only">
-                                        <label for="douze">12</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="treize" id="treize" class="screen-reader-only">
-                                        <label for="treize">13</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="quatorze" id="quatorze" class="screen-reader-only">
-                                        <label for="quatorze">14</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="quinze" id="quinze" class="screen-reader-only complet">
-                                        <label for="quinze">15</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="seize" id="seize" class="screen-reader-only">
-                                        <label for="seize">16</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="dixSept" id="dixSept" class="screen-reader-only">
-                                        <label for="dixSept">17</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="dixHuit" id="dixHuit" class="screen-reader-only">
-                                        <label for="dixHuit">18</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="dixNeuf" id="dixNeuf" disabled="true" class="screen-reader-only">
-                                        <label for="dixNeuf">19</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingt" id="vingt" class="screen-reader-only">
-                                        <label for="vingt">20</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtUn" id="vingtUn" class="screen-reader-only">
-                                        <label for="vingtUn">21</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtDeux" id="vingtDeux" class="screen-reader-only">
-                                        <label for="vingtDeux">22</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtTrois" id="vingtTrois" class="screen-reader-only">
-                                        <label for="vingtTrois">23</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtQuatre" id="vingtQuatre" class="screen-reader-only">
-                                        <label for="vingtQuatre">24</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtCinq" id="vingtCinq" class="screen-reader-only">
-                                        <label for="vingtCinq">25</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtSix" id="vingtSix" disabled="true" class="screen-reader-only">
-                                        <label for="vingtSix">26</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtSept" id="vingtSept" class="screen-reader-only">
-                                        <label for="vingtSept">27</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtHuit" id="vingtHuit" class="screen-reader-only">
-                                        <label for="vingtHuit">28</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="vingtNeuf" id="vingtNeuf" class="screen-reader-only">
-                                        <label for="vingtNeuf">29</label>
-                                    </li>
-                                    <li><input type="radio" name="calendrier" value="trente" id="trente" class="screen-reader-only">
-                                        <label for="trente">30</label>
-                                    </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="legendeCalendrier">
-                                <div class="aujourdHui"><span class="span"></span><p>Aujourd'hui</p></div>
-                                <div class="ferme"><span class="span"></span><p>Fermé</p></div>
-                                <div class="complet"><span class="span"></span><p>Complet</p></div>
-                            </div>
-                        </div>
-
-                        <p>Service(s) demandé(s):</p><br>
-                        <div class="conteneurCheckbox">
-                            <div class="checkbox">
-                                <input type="checkbox" name="coupeCheveux" id="coupeCheveux">
-                                <label for="coupeCheveux">Coupe de <br> cheveux</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="coloration" id="coloration">
-                                <label for="coloration">Coloration</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="soinsCheveux" id="soinsCheveux">
-                                <label for="soinsCheveux">Soins <br> cheveux</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="coupeBarbe" id="coupeBarbe">
-                                <label for="coupeBarbe">Coupe de <br> barbe</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="soinsBarbe" id="soinsBarbe">
-                                <label for="soinsBarbe">Soins <br> barbe</label>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="soinsVisage" id="soinsVisage">
-                                <label for="soinsVisage">Soins <br> visage</label>
-                            </div>
-                        </div>-->
-
                         <fieldset class="commentaires">
-                            <label for="commentaires">Commentaires</label>
+                            <label for="commentaires">Message:</label>
                             <textarea name="commentaires"></textarea>                      
                         </fieldset>
-                        <button type="button">Soumettre</button>
+                        <button class="form_button" type="button">Soumettre</button>
                     </fieldset>
                 </form>
             </section>

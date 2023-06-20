@@ -212,21 +212,33 @@ svg{
 .effetH2{
     display: block;
     height: 320px;
+    height: fit-content;
+    position: relative;
 }
 .titreSecondaire{
     font-family: 'Angkor', fantasy;
-    font-size: 4em;  
+    font-size: 3em;  
     z-index: 3;
 }
 .effet{
     font-family: 'Angkor', fantasy;
-    font-size: 4em;
-    position: relative;
-    top: -4.35em; 
+    font-size: 3em;
+    position: absolute;
+    top: 2%;
+    left: 0;
     z-index: -1;
     -webkit-text-stroke: .02px var(--couleurBlanc);
     -webkit-text-fill-color: var(--couleurNoir);
 }
+.effetH2:nth-child(1),
+.effetH2:nth-child(3){
+    margin-left: 1em;
+}
+.effet:nth-child(2){
+    right: 0;
+}
+
+
 @media(min-width:600px){
     .effetH2{
         display: block;
@@ -236,15 +248,16 @@ svg{
         font-family: 'Angkor', fantasy;
         font-size: 4em;  
         z-index: 3;
+        max-height: 100%;
+        margin: 0 0;
     }
     .effet{
         font-family: 'Angkor', fantasy;
-        font-size: 4em;
-        position: relative;
-        top: -2.55em; 
-        z-index: -1;
+        font-size: 4em; 
         -webkit-text-stroke: .02px var(--couleurBlanc);
         -webkit-text-fill-color: var(--couleurNoir);
+        max-height: 100%;
+        margin: 0 0;
     }
 }
 
@@ -260,11 +273,41 @@ p:nth-child(1) svg{
 img{
     max-width: 100%;
 }
+
+/* NOTRE HISTOIRE */
+.un{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+}
+.h2--histoire{
+    max-width: 100%;
+}
 .notreHistoire{
     box-shadow: var(--couleurRouge) -5px 5px;
     max-width: 80%;
     max-height: 80%;
     display: block;
+}
+.un p{
+    margin: 1em 1em;
+}
+@media(min-width: 750px){
+    .un{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .h2--histoire{
+        flex: 1 0 100%;
+    }
+    .notreHistoire,
+    .un p{
+        flex: 0 1 40%;
+    }
 }
 
 
@@ -301,6 +344,10 @@ img{
 .suivant,
 .precedent{
     margin: 1em;
+}
+.ctn__btn+p{
+    font-size: .8em;
+    text-align: center;
 }
 
 @media(min-width: 600px){
@@ -393,6 +440,11 @@ img{
         height: 100%;
     }
 }
+@media(min-width: 1000px){
+    .h2{
+        margin: 100px;
+    }
+}
 .ctn__coordonnees svg{
     margin-left: 0;
 }
@@ -470,8 +522,6 @@ fieldset fieldset input[type="text"]{
 fieldset div{
     margin-bottom: 1em;
 }
-
-
 fieldset p{
     text-transform: uppercase;
 }
@@ -512,67 +562,6 @@ input[type="email"]{
 }*/
 
 
-/*CALENDRIER*/
-/*.calendrier{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    background-color: var(--couleurBlanc);
-    width: 255px;
-    padding-top: 1em;
-    align-self: center;
-}
-.calendrier p{
-    color: var(--couleurNoir);
-    text-transform: uppercase;
-    margin: 0;
-    align-self: center;
-    border-bottom: solid 1px var(--couleurNoir);
-}
-.jour{
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: center;
-    flex-wrap: wrap;
-    color: var(--couleurNoir);
-    list-style-type: none;
-    padding: 0 20px;
-    width: 215px;
-}
-.jour li{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-}
-li label{
-    padding: 5px;
-    max-width: 100%;
-    max-height: 100%;
-}
-.semaine{
-    border-bottom: solid 2px var(--couleurNoir);
-    height: 20px;
-    width: 20px;
-}
-.jaune{
-    border: solid 1px var(--couleurJaune);
-    border-radius: 50%;
-}
-.rouge{
-    background-color: var(--couleurRouge);
-    border-radius: 50%;
-}
-.disabled{
-    background-color: rgba(43, 47, 61, 38%);
-    border-radius: 50%;
-}
-.selectionne{
-    border: solid 1px var(--couleurNoir);
-    border-radius: 50%;
-}*/
 
 
 /*BOUTONS RADIO*/
@@ -673,8 +662,6 @@ width: auto;
     height: 30px;
     margin-right: 1em;
 }*/
-
-
 /*CHECKBOX*/
 /*
 .conteneurCheckbox{
@@ -745,6 +732,11 @@ button{
     width: 280px;
     height: 80px;
     align-self: center;
+}
+@media(min-width: 600px){
+    .form_button{
+        margin: auto;
+    }
 }
 button:hover{
     text-decoration: underline;
