@@ -3,24 +3,33 @@
     <head>
         <title>Le Barbershop du coin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="https://kit.fontawesome.com/a60a77260e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="./css/styles.css"></link>
     </head>
     <body>
         <header>
-            <div class="menuVisible">
-                <img class="logo" src="" alt="">
-                <img class="nav_icon ferme" src="./images/hamburger_menu_icon.svg">
-            </div>
-            <ul class="menuCache" role="navigation">
-                <li><a href="#notreHistoire">Notre histoire</a></li>
-                <li><a href="#nosServices">Nos services</a></li>
-                <li><a href="#nousTrouver">Nous trouver</a></li>
-                <li><a href="#rendezVous">Rendez-vous</a></li>
-            </ul>   
+            <a href="">
+                <img class="logo" src="./images/logo_mini.svg" alt="Accueil du site">
+            </a>
+            <button class="btnMenu" type="button">
+                <span class="fa-solid fa-bars" aria-label="Menu"></span>
+                Menu
+            </button>
+            <nav class="ctn_nav menuCache" role="navigation">
+                <ul>
+                    <li><a href="#notreHistoire">Notre histoire</a></li>
+                    <li><a href="#nosServices">Nos services</a></li>
+                    <li><a href="#nousTrouver">Nous trouver</a></li>
+                    <li><a href="#rendezVous">Rendez-vous</a></li>
+                </ul>   
+            </nav>
+            
         </header>
         <main role="main">
-            <section class="enTete"></section>
-            
+            <section class="enTete" aria-label="Salon de barbier. Mur des briques avec trois hauts mirroirs derrière trois sièges noirs vides."></section>
+    
             <section class="un" id="notreHistoire">
                 <div class="h2 h2--histoire">
                     <div class="effetH2">
@@ -31,7 +40,7 @@
                         <rect width="200px" height="38px" style="fill: #df7a56"></rect>
                     </svg>
                 </div>             
-                <img class="notreHistoire" src="./images/clam-lo-3fe9WvS0FfU-unsplash422.jpg" alt="">
+                <img class="notreHistoire" src="./images/clam-lo-3fe9WvS0FfU-unsplash422.jpg" alt="portrait d'un homme avec un hapeau, des lunettes et vêtu d'une veste en jean.">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dui ut sem iaculis tempus vel ullamcorper tellus. Suspendisse pretium, sem non auctor ultricies, nunc orci ornare velit, sit amet ornare nisl massa vel lectus. Sed semper venenatis leo eget fermentum. Vivamus eget egestas nunc, sit amet lacinia risus. 
                     Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
                     Cras aliquam vitae velit nec faucibus. Etiam nec sapien eros. Praesent tempus nulla et orci malesuada, non fermentum felis viverra. Aliquam semper nibh nibh, sed suscipit nunc lobortis sit amet. <br>
@@ -51,7 +60,7 @@
                     </div>
                 </div>
                 <div class="nosServices">
-                    <img class="nosServices__services" src="./images/nosServices/services1.png" alt="">
+                    <img class="nosServices__services" src="./images/nosServices/services1.png" alt="Un barbier avec un client assis sur une chaise.">
                     <div class="ctn__btn">
                         <button class="precedent">&#9664;</button>
                         <button class="suivant">&#9654;</button>
@@ -73,7 +82,7 @@
                     </svg>
                 </div>
                 <div class="ctn_map">
-                    <div class="map"></div>
+                    <div class="map" aria-label="Plan du quartier. Icone pour indiquer l'emplacement du salon."></div>
                     <div class="ctn__coordonnees">
                         <svg width="200px" height="20px">
                             <rect width="200px" height="38px" style="fill: #fff"></rect>
