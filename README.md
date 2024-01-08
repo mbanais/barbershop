@@ -1,1 +1,3 @@
-# barbershop
+# Le barbershop du coin
+
+## Projet
