@@ -19,14 +19,14 @@
         </header>
         <main class="mainIndex">
             <section class="notreHistoire">
-                <h2>Notre histoire</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dui ut sem iaculis tempus vel ullamcorper tellus.
+                <h2 class="notreHistoire__titre">Notre histoire</h2>
+                <p class="notreHistoire__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id dui ut sem iaculis tempus vel ullamcorper tellus.
                     Suspendisse pretium, sem non auctor ultricies, nunc orci ornare velit, sit amet ornare nisl massa vel lectus. Sed semper venenatis leo eget fermentum.
                     Vivamus eget egestas nunc, sit amet lacinia risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras aliquam vitae velit nec faucibus. Etiam nec sapien eros.
                     Praesent tempus nulla et orci malesuada, non fermentum felis viverra. Aliquam semper nibh nibh, sed suscipit nunc lobortis sit amet.</p>
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
+                <figure class="ctnImages">
+                    <img class="ctnImages__img" class="" src="" alt="">
+                    <figcaption class="ctnImages__reference"></figcaption>
                 </figure>
             </section>
             <section class="nosServices">
