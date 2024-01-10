@@ -1,0 +1,46 @@
+.nosServices,
+.nousTrouver{
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-start;
+  }
+  .ctnImages{
+    //border: #F0B400 solid 1px;
+    flex: 0 1 50%;
+    aspect-ratio: 1/1;
+    &__filtre{
+      width: 100%;
+      height: 100%;
+      background: rgba(25, 26, 28, 0.5);
+    }
+  }
+  .ctnTexte{
+    //border: #F0B400 solid 1px;
+    flex: 0 1 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    &__p{
+      text-align: center;
+      margin: 0 1em;
+      @media (min-width: 600px) {
+        margin: 0 3em;
+      }
+    }
+  }
+}
+.nosServices .ctnImages{
+  background-image: url("../images/images/image_nosServices.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nousTrouver .ctnImages{
+  background-image: url("../images/images/image_nousTrouver.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

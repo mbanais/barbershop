@@ -1,0 +1,22 @@
+button,
+.button{
+  background: $blanc;
+  color: $bleuNoir;
+  font-family: $fontePrincipale;
+  padding: 10px 16px;
+  border: none;
+  text-decoration: none;
+  &:hover{
+    background: #aaa;
+    font-weight: bold;
+  }
+  &:active{
+    color: $bleuNoir;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  &:focus{
+    outline: $blanc solid 1px;
+    outline-offset: 2px;
+  }
+}

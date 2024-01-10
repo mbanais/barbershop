@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Angkor&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 
+
+@import "utilitaires/variables";
+@import "utilitaires/polices";
+@import "base/base";
 @import "base/boutons";
 @import "base/header";
+@import "base/navigation";
+@import "layout/histoire";
+@import "layout/sectionsIndex";
+@import "layout/informations";
+@import "layout/formulaire";
+@import "layout/footer";

@@ -1,0 +1,62 @@
+.notreHistoire{
+  background: $blanc;
+  color: $bleuNoir;
+  //height: 90%;
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  &__titre{
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: $bleuNoir;
+    //border: #aaaaaa solid 2px;
+    @media (min-width: 600px){
+      flex: 1 0 100%;
+    }
+  }
+  .histoire{
+    //border: #757272 solid 2px;
+    @media (min-width: 600px){
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-height: 100%;
+    }
+    @media (min-width: 1000px){
+      width: 1000px;
+      margin: 0 auto;
+    }
+    &__p{
+      //border: #aaaaaa solid 2px;
+      @media (min-width: 600px){
+        margin: auto auto;
+        flex: 0 1 50%;
+      }
+    }
+    .ctnImages{
+      //border: #aaaaaa solid 2px;
+      position: relative;
+      max-height: 80%;
+      @media (min-width: 600px){
+        flex: 0 1 50%;
+      }
+      &__img{
+        display: block;
+        max-width: 100%;
+        @media (min-width: 600px){
+          max-height: 100%;
+        }
+      }
+      &__reference{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: $blanc;
+      }
+    }
+  }
+}

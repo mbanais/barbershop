@@ -4,11 +4,16 @@
 
 <!DOCTYPE html>
  <html>
-    <head></head>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./public/liaisons/css/styles.css">
+        <script src="./public/liaisons/js/navigation.js" defer></script>
+        <script src="https://kit.fontawesome.com/5482d63b2f.js" crossorigin="anonymous"></script>
+    </head>
     <body class="bodyContact">
-        <header>
+        <header class="headerContact">
             <nav>
-                <img src="./public/images/icones/mini_logo.svg" alt="accueil" width="44px">
+                <img src="public/liaisons/images/icones/mini_logo.svg" alt="accueil" width="44px">
                 <ul>
                     <li>Notre histoire</li>
                     <li>Nos services</li>
@@ -21,27 +26,28 @@
                 <h2 class="nosContacts__titre">Nos contacts</h2>
                 <ul class="listeContacts">
                     <li class="adresse">
-                        <img class="adresse_img" src="" alt="">
-                        <p class="adresse__texte">Le Barbershop du coin
-                            3000  boulevard  Saint-Joseph Est
-                            Québec QC G1G 2V1
-
+                        <img class="adresse_img" src="./public/liaisons/images/icones/location_pin.svg" alt="">
+                        <p class="adresse__texte">Le Barbershop du coin<br>
+                            3000  boulevard  Saint-Joseph Est<br>
+                            Québec QC G1G 2V1<br>
                             Lundi-Vendredi: 10h-18h</p>
                     </li>
                     <li class="telephone">
-                        <img class="telephone__img" src="" alt="">
+                        <img class="telephone__img" src="./public/liaisons/images/icones/phone.svg" alt="">
                         <p class="telephone__numero">+ 1-514-345-9876</p>
                     </li>
                     <li class="courriel">
-                        <img class="courriel__img" src="" alt="">
+                        <img class="courriel__img" src="./public/liaisons/images/icones/email.svg" alt="">
                         <a class="courriel__lien" href="mailto:lebabershopducoin@coiffure.com">lebabershopducoin@coiffure.com</a>
                     </li>
                 </ul>
-                <img class="nosContacts__plan" src="" alt="plan">
+                <img class="nosContacts__plan" src="./public/liaisons/images/images/maps.jpg" alt="plan">
             </section>
             <section class="nousContacter">
                 <h2 class="nousContacter__titre">Nous contacter</h2>
-                <span class="nosContacts__indication">Tous les champs sont obligatoires</span>
+                <span class="nosContacts__indication">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Tous les champs sont obligatoires</span>
                 <form class="formulaire" method="get" action="contact.php">
                     <fieldset>
                         <fieldset class="nom">
@@ -59,6 +65,7 @@
                         <fieldset class="sujet">
                             <label class="sujet__label" for="sujet">Sujet</label>
                             <select class="sujet__select" id="sujet">
+                                <option label="">Choisir un sujet</option>
                                 <option value="Prise rdv">Prise de rendez-vous</option>
                                 <option value="Modification rdv">Modification de rendez-vous</option>
                                 <option value="Informations">Informations générales</option>
@@ -69,8 +76,8 @@
                     <fieldset class="message">
                         <label class="message__label" for="message">Message</label>
                         <textarea class="message_text" id="message"></textarea>
+                        <button type="button">Envoyer</button>
                     </fieldset>
-                    <button type="button">Envoyer</button>
                 </form>
             </section>
         </main>

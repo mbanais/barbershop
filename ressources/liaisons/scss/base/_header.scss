@@ -1,0 +1,22 @@
+//Header de la page index.php
+.headerIndex{
+  height: 90vh;
+  background-image: url("../images/images/image_entete1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1{
+    font-family: $fonteTitre;
+    margin: auto auto;
+    span{
+      font-family: $fontePrincipale;
+    }
+  }
+}
+
+//Header de la page contact.php
+.headerContact{
+  height: 60vh;
+  background-image: url("../images/images/contact_enTete.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

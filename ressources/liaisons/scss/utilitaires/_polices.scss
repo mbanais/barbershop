@@ -1,0 +1,12 @@
+body{
+  color: $blanc;
+  font-family: $fontePrincipale;
+
+  h2{
+    -webkit-text-stroke-width: .3px;
+    -webkit-text-stroke-color: $blanc;
+    font-family: $fonteTitre;
+    color: transparent;
+    font-size: 2.5em;
+  }
+}
