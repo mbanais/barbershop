@@ -71,7 +71,13 @@
         background: $bleuNoir;
         color: $blanc;
       }
+      .erreur{
+        border: #FF8357 solid 2px;
+      }
     }
-
+  }
+  .retroactionErreur,
+  .labelErreur{
+    color: #FF8357;
   }
 }

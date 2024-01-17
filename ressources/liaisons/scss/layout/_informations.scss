@@ -29,14 +29,25 @@
         border-bottom: none;
         border-right: $blanc solid 2px;
       }
+      &__texte{
+        margin: auto;
+      }
     }
     .telephone{
       text-align: center;
+      &__img{
+        margin-top: .4em;
+        @media (min-width: 600px) {
+          margin-top: unset;
+        }
+      }
+      &__numero{
+        margin: auto;
+      }
     }
     .courriel{
       border-top: $blanc solid 2px;
       text-align: center;
-      text-wrap: normal;
       @media (min-width: 600px) {
         border-top: none;
         border-left: $blanc solid 2px;
@@ -44,6 +55,8 @@
       &__lien{
         color: $blanc;
         text-decoration: none;
+        word-break: break-word;
+        margin: auto;
       }
     }
     img{
@@ -52,9 +65,17 @@
       margin: 0 auto;
     }
     li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 200px;
       aspect-ratio: 1/1;
       padding: .5em .5em;
+      @media (min-width: 600px) {
+        aspect-ratio: unset;
+        height: 220px;
+        width: 300px;
+      }
     }
   }
   &__plan{

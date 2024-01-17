@@ -1,8 +1,4 @@
-nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.ctn-navbar{
   background: linear-gradient($bleuNoir, #191A1C00);
   position: fixed;
   top: 0;
@@ -10,28 +6,55 @@ nav{
   width: 100%;
   z-index: 4;
   transition: background ease-in-out 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+  div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    a{
+      display: block;
+    }
+  }
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   @media (min-width:600px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
   }
   ul{
-    list-style-type: none;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-start;*/
+    list-style-type: none;
     @media (min-width:600px) {
-      flex-direction: row;
+      /*flex-direction: row;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: flex-end;*/
     }
     li{
       margin: .3em 1em;
+      width: 100%;
+      @media (min-width: 600px) {
+      }
       a{
         color: $blanc;
         text-decoration: none;
         transition: ease-in-out 2s;
+        width: 7em;
         &:hover{
           text-decoration: underline;
           border-bottom: $blanc;
@@ -49,4 +72,44 @@ nav{
 }
 .bg-solid{
   background: #191A1C;
+}
+.menuOuvert{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  text-align: right;
+  width: 100vw;
+  background: $blanc;
+  color: $bleuNoir;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: unset;
+    width: unset;
+    background: linear-gradient($bleuNoir, #191A1C00);
+    color: $blanc;
+  }
+}
+.menuFerme{
+  display: none;
+}
+.sectionEnCours{
+  font-weight: bold;
+  color: #DF7A56;
+  border-bottom: #DF7A56 solid 5px;
+}
+.couleurBg{
+  background: $blanc;
+  @media (min-width: 600px) {
+    background: linear-gradient($bleuNoir, #191A1C00);
+  }
+  a{
+    color: $bleuNoir;
+    @media (min-width: 600px) {
+      color: $blanc;
+    }
+  }
 }

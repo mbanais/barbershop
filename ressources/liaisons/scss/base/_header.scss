@@ -1,9 +1,29 @@
-//Header de la page index.html
+//Header de la page index.php
 .headerIndex{
-  height: 90vh;
+  height: 100vh;
   background-image: url("../images/images/image_entete1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: relative;
+  @media (min-width: 600px) {
+    height: 90vh;
+  }
+  div{
+    a{
+      display: block;
+      z-index: 3;
+      img{
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  &__imgTitre{
+    display: block;
+    width: 35vw;
+    margin: auto auto;
+  }
   h1{
     font-family: $fonteTitre;
     margin: auto auto;
@@ -11,12 +31,30 @@
       font-family: $fontePrincipale;
     }
   }
+  &__source{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
 }
 
-//Header de la page contact.html
+//Header de la page contact.php
 .headerContact{
   height: 60vh;
   background-image: url("../images/images/contact_enTete.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: relative;
+  img{
+    width: 45px;
+    height: 45px;
+  }
+  &__source{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
 }

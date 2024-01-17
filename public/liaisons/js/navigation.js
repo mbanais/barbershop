@@ -1,4 +1,4 @@
-const navigation = document.querySelector('nav');
+const navigation = document.querySelector('.ctn-navbar');
 window.onscroll = () => {
     if (window.scrollY > 300) {
         navigation.classList.add('bg-solid');

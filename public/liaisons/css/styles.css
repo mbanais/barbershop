@@ -50,10 +50,30 @@ button:focus,
 }
 
 .headerIndex {
-  height: 90vh;
+  height: 100vh;
   background-image: url("../images/images/image_entete1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@media (min-width: 600px) {
+  .headerIndex {
+    height: 90vh;
+  }
+}
+.headerIndex div a {
+  display: block;
+  z-index: 3;
+}
+.headerIndex div a img {
+  width: 45px;
+  height: 45px;
+}
+.headerIndex__imgTitre {
+  display: block;
+  width: 35vw;
+  margin: auto auto;
 }
 .headerIndex h1 {
   font-family: "Angkor";
@@ -62,19 +82,33 @@ button:focus,
 .headerIndex h1 span {
   font-family: "Raleway";
 }
+.headerIndex__source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
 
 .headerContact {
   height: 60vh;
   background-image: url("../images/images/contact_enTete.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.headerContact img {
+  width: 45px;
+  height: 45px;
+}
+.headerContact__source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+.ctn-navbar {
   background: linear-gradient(#191A1C, rgba(25, 26, 28, 0));
   position: fixed;
   top: 0;
@@ -82,6 +116,32 @@ nav {
   width: 100%;
   z-index: 4;
   transition: background ease-in-out 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media (min-width: 600px) {
+  .ctn-navbar {
+    flex-direction: row;
+  }
+}
+.ctn-navbar div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.ctn-navbar div a {
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 @media (min-width: 600px) {
   nav {
@@ -91,26 +151,28 @@ nav {
   }
 }
 nav ul {
-  list-style-type: none;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-start;*/
+  list-style-type: none;
 }
 @media (min-width: 600px) {
   nav ul {
-    flex-direction: row;
+    /*flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-end;*/
   }
 }
 nav ul li {
   margin: 0.3em 1em;
+  width: 100%;
 }
 nav ul li a {
   color: #fff;
   text-decoration: none;
   transition: ease-in-out 2s;
+  width: 7em;
 }
 nav ul li a:hover {
   text-decoration: underline;
@@ -126,6 +188,55 @@ nav ul li a:focus {
 
 .bg-solid {
   background: #191A1C;
+}
+
+.menuOuvert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  text-align: right;
+  width: 100vw;
+  background: #fff;
+  color: #191A1C;
+}
+@media (min-width: 600px) {
+  .menuOuvert {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: unset;
+    width: unset;
+    background: linear-gradient(#191A1C, rgba(25, 26, 28, 0));
+    color: #fff;
+  }
+}
+
+.menuFerme {
+  display: none;
+}
+
+.sectionEnCours {
+  font-weight: bold;
+  color: #DF7A56;
+  border-bottom: #DF7A56 solid 5px;
+}
+
+.couleurBg {
+  background: #fff;
+}
+@media (min-width: 600px) {
+  .couleurBg {
+    background: linear-gradient(#191A1C, rgba(25, 26, 28, 0));
+  }
+}
+.couleurBg a {
+  color: #191A1C;
+}
+@media (min-width: 600px) {
+  .couleurBg a {
+    color: #fff;
+  }
 }
 
 .notreHistoire {
@@ -150,6 +261,9 @@ nav ul li a:focus {
     flex: 1 0 100%;
   }
 }
+.notreHistoire .histoire {
+  padding-bottom: 0.6em;
+}
 @media (min-width: 600px) {
   .notreHistoire .histoire {
     display: flex;
@@ -157,6 +271,7 @@ nav ul li a:focus {
     justify-content: flex-start;
     align-items: flex-start;
     max-height: 100%;
+    padding-bottom: unset;
   }
 }
 @media (min-width: 1000px) {
@@ -165,9 +280,12 @@ nav ul li a:focus {
     margin: 0 auto;
   }
 }
+.notreHistoire .histoire__p {
+  margin: auto 0.5em;
+}
 @media (min-width: 600px) {
   .notreHistoire .histoire__p {
-    margin: auto auto;
+    margin: auto auto auto 0.5em;
     flex: 0 1 50%;
   }
 }
@@ -196,6 +314,15 @@ nav ul li a:focus {
   color: #fff;
 }
 
+.nousTrouver {
+  border-top: #fff solid 2px;
+}
+@media (min-width: 600px) {
+  .nousTrouver {
+    border-top: none;
+  }
+}
+
 @media (min-width: 600px) {
   .nosServices,
   .nousTrouver {
@@ -209,12 +336,23 @@ nav ul li a:focus {
 .nousTrouver .ctnImages {
   flex: 0 1 50%;
   aspect-ratio: 1/1;
+  position: relative;
 }
 .nosServices .ctnImages__filtre,
 .nousTrouver .ctnImages__filtre {
   width: 100%;
   height: 100%;
   background: rgba(25, 26, 28, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nosServices .ctnImages__source,
+.nousTrouver .ctnImages__source {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 }
 .nosServices .ctnTexte,
 .nousTrouver .ctnTexte {
@@ -224,6 +362,16 @@ nav ul li a:focus {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+.nosServices .ctnTexte__titre,
+.nousTrouver .ctnTexte__titre {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  .nosServices .ctnTexte__titre,
+  .nousTrouver .ctnTexte__titre {
+    margin-bottom: unset;
+  }
 }
 .nosServices .ctnTexte__p,
 .nousTrouver .ctnTexte__p {
@@ -286,13 +434,26 @@ nav ul li a:focus {
     border-right: #fff solid 2px;
   }
 }
+.nosContacts .listeContacts .adresse__texte {
+  margin: auto;
+}
 .nosContacts .listeContacts .telephone {
   text-align: center;
+}
+.nosContacts .listeContacts .telephone__img {
+  margin-top: 0.4em;
+}
+@media (min-width: 600px) {
+  .nosContacts .listeContacts .telephone__img {
+    margin-top: unset;
+  }
+}
+.nosContacts .listeContacts .telephone__numero {
+  margin: auto;
 }
 .nosContacts .listeContacts .courriel {
   border-top: #fff solid 2px;
   text-align: center;
-  text-wrap: normal;
 }
 @media (min-width: 600px) {
   .nosContacts .listeContacts .courriel {
@@ -303,6 +464,8 @@ nav ul li a:focus {
 .nosContacts .listeContacts .courriel__lien {
   color: #fff;
   text-decoration: none;
+  word-break: break-word;
+  margin: auto;
 }
 .nosContacts .listeContacts img {
   display: block;
@@ -310,9 +473,19 @@ nav ul li a:focus {
   margin: 0 auto;
 }
 .nosContacts .listeContacts li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 200px;
   aspect-ratio: 1/1;
   padding: 0.5em 0.5em;
+}
+@media (min-width: 600px) {
+  .nosContacts .listeContacts li {
+    aspect-ratio: unset;
+    height: 220px;
+    width: 300px;
+  }
 }
 .nosContacts__plan {
   display: block;
@@ -406,6 +579,13 @@ nav ul li a:focus {
 .nousContacter .formulaire fieldset option {
   background: #191A1C;
   color: #fff;
+}
+.nousContacter .formulaire fieldset .erreur {
+  border: #FF8357 solid 2px;
+}
+.nousContacter .retroactionErreur,
+.nousContacter .labelErreur {
+  color: #FF8357;
 }
 
 footer {

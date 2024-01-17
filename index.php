@@ -1,25 +1,29 @@
+<?php ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./public/liaisons/css/styles.css">
         <script src="./public/liaisons/js/navigation.js" defer></script>
+        <script src="./public/liaisons/js/menu.js" defer></script>
+        <script src="./public/liaisons/js/couleur.js" defer></script>
+        <script src="https://kit.fontawesome.com/5482d63b2f.js" crossorigin="anonymous"></script>
     </head>
     <body class="bodyIndex">
-        <header class="headerIndex">
-            <nav>
+        <header class="headerIndex" aria-roledescription="Salon de barbier. Mur des briques avec trois hauts mirroirs derrière trois sièges noirs vides.">
+            <div class="ctn-navbar">
                 <div>
-                    <a href="index.php">
-                        <img src="public/liaisons/images/icones/mini_logo.svg" alt="accueil" width="44px">
-                    </a>
+                    <a href="index.php"><img src="public/liaisons/images/icones/mini_logo.svg" alt="accueil" width="44px"></a>
                 </div>
-                <ul>
-                    <li><a href="#histoire">Notre histoire</a></li>
-                    <li><a href="#services">Nos services</a></li>
-                    <li><a href="#trouver">Nous trouver</a></li>
-                </ul>
-            </nav>
-            <h1><span>Le</span> barbershop <span>du coin</span></h1>
+                <nav>
+                    <ul class=""><li><a href="#histoire">Notre histoire</a></li>
+                        <li><a href="#services">Nos services</a></li>
+                        <li><a href="#trouver">Nous trouver</a></li></ul>
+                </nav>
+            </div>
+            <img class="headerIndex__imgTitre" src="public/liaisons/images/icones/lebarbershop.svg" alt="" width="300">
+            <h1 hidden>Le barbershop du coin</h1>
+            <span class="headerIndex__source">© <a class="source" href="https://unsplash.com/photos/EW_rqoSdDes">Photo by Nathon Oski on Unsplash</a></span>
         </header>
         <main class="mainIndex">
             <section class="notreHistoire" id="histoire">
@@ -31,17 +35,14 @@
                         Praesent tempus nulla et orci malesuada, non fermentum felis viverra. Aliquam semper nibh nibh, sed suscipit nunc lobortis sit amet.</p>
                     <figure class="ctnImages">
                         <img class="ctnImages__img" src="./public/liaisons/images/images/image_notreHistoire2.jpg" alt="">
-                        <figcaption class="ctnImages__reference">© Unsplash</figcaption>
+                        <figcaption class="ctnImages__reference">© <a class="liensFooter" href="https://unsplash.com/photos/3fe9WvS0FfU">Photo by Clam Lo on Unsplash</a></figcaption>
                     </figure>
                 </div>
             </section>
             <section class="nosServices" id="services">
-                <div class="ctnImages">
+                <div class="ctnImages" aria-roledescription="Un barbier avec un client assis sur une chaise.">
                     <div class="ctnImages__filtre"></div>
-                    <figure hidden class="illustration">
-                        <img class="illustration__img" src="" alt="">
-                        <figcaption class="illustration__legende"></figcaption>
-                    </figure>
+                    <span class="ctnImages__source">© <a class="source" href="https://www.pexels.com/fr-fr/photo/deux-hommes-a-l-interieur-de-la-chambre-2775269/">Photo de Thgusstavo Santana</a></span>
                 </div>
                 <div class="ctnTexte">
                     <h2 class="ctnTexte__titre">Nos services</h2>
@@ -54,14 +55,11 @@
                     <h2 class="ctnTexte__titre">Nous trouver</h2>
                     <p class="ctnTexte__p">Vous souhaitez nous rencontrer ou nous écrire?
                         N’hésitez pas il nous fera plaisir de vous répondre.</p>
-                    <a href="./contact.php" class="ctnTexte__bouton button">Trouver nos informations</a>
+                    <a href="contact.php" class="ctnTexte__bouton button">Trouver nos informations</a>
                 </div>
-                <div class="ctnImages">
+                <div class="ctnImages" aria-roledescription="la façade d'un salon de barbier">
                     <div class="ctnImages__filtre"></div>
-                    <figure hidden class="illustration">
-                        <img class="illustration__img" src="" alt="">
-                        <figcaption class="illustration__legende"></figcaption>
-                    </figure>
+                    <span class="ctnImages__source">© Photo de <a href="https://unsplash.com/fr/@jweiss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jonathan Weiss</a> sur <a href="https://unsplash.com/fr/photos/porte-a-panneaux-de-verre-avec-cadres-en-bois-brun-1wT1EcGXKBk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></span>
                 </div>
             </section>
         </main>
