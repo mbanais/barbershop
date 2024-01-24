@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  //align-items: flex-start;
   align-items: stretch;
   &__titre{
     text-align: center;
@@ -11,7 +10,6 @@
     @media (min-width: 600px) {
       width: fit-content;
       padding-top: 1em;
-      //border-top: $blanc solid 2px;
     }
   }
   span{

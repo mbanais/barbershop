@@ -24,11 +24,43 @@
     width: 35vw;
     margin: auto auto;
   }
-  h1{
+  .titre{
+    font-family: $headerPrincipal;
     font-family: $fonteTitre;
     margin: auto auto;
-    span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    top: 15vh;
+    &__debut,
+    &__fin{
       font-family: $fontePrincipale;
+      font-weight: lighter;
+    }
+    &__debut{
+      text-transform: uppercase;
+      font-size: .6em;
+      text-align: left;
+      @media (min-width:600px) {
+        font-size: .8em;
+      }
+    }
+    &__milieu{
+      font-size: 1.4em;
+      font-weight: bolder;
+      @media (min-width:600px) {
+        font-size: 2em;
+      }
+    }
+    &__fin{
+      text-transform: uppercase;
+      font-size: .6em;
+      text-align: right;
+      @media (min-width:600px) {
+        font-size: .8em;
+      }
     }
   }
   &__source{

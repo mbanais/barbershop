@@ -35,15 +35,8 @@ nav{
     align-items: flex-end;
   }
   ul{
-    /*display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;*/
     list-style-type: none;
     @media (min-width:600px) {
-      /*flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;*/
     }
     li{
       margin: .3em 1em;

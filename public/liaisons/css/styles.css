@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Angkor&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Angkor&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 body {
   color: #fff;
   font-family: "Raleway";
@@ -75,12 +76,49 @@ button:focus,
   width: 35vw;
   margin: auto auto;
 }
-.headerIndex h1 {
+.headerIndex .titre {
+  font-family: "Libre Baskerville";
   font-family: "Angkor";
   margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
+  position: relative;
+  top: 15vh;
 }
-.headerIndex h1 span {
+.headerIndex .titre__debut, .headerIndex .titre__fin {
   font-family: "Raleway";
+  font-weight: lighter;
+}
+.headerIndex .titre__debut {
+  text-transform: uppercase;
+  font-size: 0.6em;
+  text-align: left;
+}
+@media (min-width: 600px) {
+  .headerIndex .titre__debut {
+    font-size: 0.8em;
+  }
+}
+.headerIndex .titre__milieu {
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+@media (min-width: 600px) {
+  .headerIndex .titre__milieu {
+    font-size: 2em;
+  }
+}
+.headerIndex .titre__fin {
+  text-transform: uppercase;
+  font-size: 0.6em;
+  text-align: right;
+}
+@media (min-width: 600px) {
+  .headerIndex .titre__fin {
+    font-size: 0.8em;
+  }
 }
 .headerIndex__source {
   position: absolute;
@@ -151,18 +189,7 @@ nav {
   }
 }
 nav ul {
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;*/
   list-style-type: none;
-}
-@media (min-width: 600px) {
-  nav ul {
-    /*flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;*/
-  }
 }
 nav ul li {
   margin: 0.3em 1em;
