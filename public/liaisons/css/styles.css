@@ -76,7 +76,7 @@ button:focus,
 
 .headerIndex {
   height: 100vh;
-  background-image: url("../images/images/image_entete1.jpg");
+  background-image: url("./images/images/image_entete1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
