@@ -1,11 +1,13 @@
 button,
-.button{
+.button,
+.button:visited{
   background: $blanc;
   color: $bleuNoir;
   font-family: $fontePrincipale;
   padding: 10px 16px;
   border: none;
   text-decoration: none;
+  font-style: none;
   &:hover{
     background: #aaa;
     font-weight: bold;
