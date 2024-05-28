@@ -1,0 +1,31 @@
+//Modification headerIndex en headerEssai pendant les essais
+
+.headerEssai{
+    position: relative;
+    height: fit-content;
+    .ctn-navbar{
+        max-width: 100%;
+        div{}
+        nav{}
+    }
+    
+    .titre{
+        width: fit-content;
+        position: absolute;
+        top: 15vh;
+        left: 10%;
+    }
+    figure{
+        margin: 0 0;
+        position: relative;
+        img{
+            display: block;
+            width: 100%;
+        }
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}

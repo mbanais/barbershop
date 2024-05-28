@@ -76,16 +76,18 @@ button:focus,
 
 .headerIndex {
   height: 100vh;
-  background-image: url("../images/images/image_entete1.jpg");
+  /*background-image: url("../images/images/image_entete1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   position: relative;
-}
-@media (min-width: 600px) {
-  .headerIndex {
-    height: 90vh;
-  }
+  height: fit-content;
+  /* &__source{
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     z-index: 3;
+   }*/
 }
 .headerIndex div a {
   display: block;
@@ -111,8 +113,9 @@ button:focus,
   flex-direction: column;
   justify-content: center;
   width: fit-content;
-  position: relative;
+  position: absolute;
   top: 15vh;
+  left: 10%;
 }
 .headerIndex .titre__debut, .headerIndex .titre__fin {
   font-family: "Raleway";
@@ -147,30 +150,57 @@ button:focus,
     font-size: 0.8em;
   }
 }
-.headerIndex__source {
+.headerIndex figure {
+  margin: 0 0;
+  position: relative;
+}
+.headerIndex figure img {
+  display: block;
+  width: 100%;
+}
+.headerIndex figure figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 3;
 }
 
-.headerContact {
+/*.headerContact{
   height: 60vh;
   background-image: url("../images/images/contact_enTete.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+  img{
+    width: 45px;
+    height: 45px;
+  }
+  &__source{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+}*/
+.headerContact {
+  position: relative;
+  height: fit-content;
 }
-.headerContact img {
-  width: 45px;
-  height: 45px;
+.headerContact .ctn-navbar {
+  max-width: 100%;
 }
-.headerContact__source {
+.headerContact figure {
+  margin: 0 0;
+  position: relative;
+}
+.headerContact figure img {
+  display: block;
+  width: 100%;
+}
+.headerContact figure figcaption {
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 3;
 }
 
 .ctn-navbar {
@@ -193,6 +223,7 @@ button:focus,
   }
 }
 .ctn-navbar div {
+  transition: none;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -204,6 +235,7 @@ button:focus,
 }
 
 nav {
+  transition: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -311,6 +343,8 @@ nav ul li a:focus {
   -webkit-text-stroke-width: 0.3px;
   -webkit-text-stroke-color: #191A1C;
   margin-left: 0.5em;
+  margin-top: 0;
+  padding-top: 0.9em;
 }
 @media (min-width: 600px) {
   .notreHistoire__titre {

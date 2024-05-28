@@ -15,6 +15,7 @@
     flex-direction: row;
   }
   div{
+    transition:none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -26,6 +27,7 @@
   }
 }
 nav{
+  transition:none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
