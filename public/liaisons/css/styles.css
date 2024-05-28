@@ -490,7 +490,6 @@ nav ul li a:focus {
 .nosContacts__titre {
   text-align: center;
   margin: 1em auto;
-  border-top: #fff solid 2px;
 }
 @media (min-width: 600px) {
   .nosContacts__titre {
